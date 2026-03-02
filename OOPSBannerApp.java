@@ -1,25 +1,26 @@
 /**
- * OOPSBannerApp UC2 – Render OOPS as Banner using + operator
+ * OOPSBannerApp UC5 – Render OOPS as Banner using Inline Array Initialization
  *
- * This use case prints OOPS in banner format
- * using string concatenation.
+ * This use case improves UC4 by declaring and initializing
+ * the String array in a single statement.
  *
  * @author Vidushi
- * @version 2.0
+ * @version 5.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-		String[] lines= new String[7];
 
-        lines[0] = String.join(" ", "  ***  ", "  ***  ", " ***** ", " ***** ");
-        lines[1] = String.join(" ", " *   * ", " *   * ", " *   * ", " *     ");
-        lines[2] = String.join(" ", " *   * ", " *   * ", " ***** ", " ***** ");
-        lines[3] = String.join(" ", " *   * ", " *   * ", " *     ", "     * ");
-        lines[4] = String.join(" ", "  ***  ", "  ***  ", " *     ", " ***** ");
-        lines[5] = String.join(" ", "       ", "       ", "       ", "       ");
-        lines[6] = String.join(" ", "       ", "       ", "       ", "       ");
+        String[] lines = {
+            String.join(" ", "  ***  ", "  ***  ", " ***** ", " ***** "),
+            String.join(" ", " *   * ", " *   * ", " *   * ", " *     "),
+            String.join(" ", " *   * ", " *   * ", " ***** ", " ***** "),
+            String.join(" ", " *   * ", " *   * ", " *     ", "     * "),
+            String.join(" ", "  ***  ", "  ***  ", " *     ", " ***** "),
+            String.join(" ", "       ", "       ", "       ", "       "),
+            String.join(" ", "       ", "       ", "       ", "       ")
+        };
 
         for (String line : lines) {
             System.out.println(line);
