@@ -1,29 +1,68 @@
 /**
- * OOPSBannerApp UC5 – Render OOPS as Banner using Inline Array Initialization
+ * OOPSBannerApp UC6 – OOPS Banner Application (Use Case 6)
  *
- * This use case improves UC4 by declaring and initializing
- * the String array in a single statement.
+ * This use case extends UC5 by implementing a modular approach
+ * to generate each letter's pattern through dedicated methods.
  *
  * @author Vidushi
- * @version 5.0
+ * @version 6.0
  */
 
 public class OOPSBannerApp {
 
+    // Method to generate pattern for letter 'O'
+    public static String[] getOPattern() {
+        return new String[] {
+            "  ***  ",
+            " *   * ",
+            " *   * ",
+            " *   * ",
+            " *   * ",
+            " *   * ",
+            "  ***  "
+        };
+    }
+
+    // Method to generate pattern for letter 'P'
+    public static String[] getPPattern() {
+        return new String[] {
+            " ***** ",
+            " *   * ",
+            " *   * ",
+            " ***** ",
+            " *     ",
+            " *     ",
+            " *     "
+        };
+    }
+
+    // Method to generate pattern for letter 'S'
+    public static String[] getSPattern() {
+        return new String[] {
+            " ***** ",
+            " *     ",
+            " *     ",
+            " ***** ",
+            "     * ",
+            "     * ",
+            " ***** "
+        };
+    }
+
+    // Main method
     public static void main(String[] args) {
 
-        String[] lines = {
-            String.join(" ", "  ***  ", "  ***  ", " ***** ", " ***** "),
-            String.join(" ", " *   * ", " *   * ", " *   * ", " *     "),
-            String.join(" ", " *   * ", " *   * ", " ***** ", " ***** "),
-            String.join(" ", " *   * ", " *   * ", " *     ", "     * "),
-            String.join(" ", "  ***  ", "  ***  ", " *     ", " ***** "),
-            String.join(" ", "       ", "       ", "       ", "       "),
-            String.join(" ", "       ", "       ", "       ", "       ")
-        };
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
 
-        for (String line : lines) {
-            System.out.println(line);
+        for (int i = 0; i < oPattern.length; i++) {
+            System.out.println(
+                oPattern[i] + " " +
+                oPattern[i] + " " +
+                pPattern[i] + " " +
+                sPattern[i]
+            );
         }
     }
 }
